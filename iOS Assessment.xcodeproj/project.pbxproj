@@ -37,6 +37,9 @@
 		23F86097271089B400A61CC8 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F86096271089B400A61CC8 /* PhotosViewModel.swift */; };
 		23F8609A271089CB00A61CC8 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F86098271089CB00A61CC8 /* PhotoTableViewCell.swift */; };
 		23F8609B271089CB00A61CC8 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F86099271089CB00A61CC8 /* PhotoTableViewCell.xib */; };
+		23F8609D27108D1E00A61CC8 /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8609C27108D1E00A61CC8 /* PhotoCellViewModel.swift */; };
+		23F8609F271090AB00A61CC8 /* PhotosDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8609E271090AB00A61CC8 /* PhotosDataSource.swift */; };
+		23F860A12710963900A61CC8 /* UITableViewCell+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F860A02710963900A61CC8 /* UITableViewCell+identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		23F86096271089B400A61CC8 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		23F86098271089CB00A61CC8 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		23F86099271089CB00A61CC8 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		23F8609C27108D1E00A61CC8 /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
+		23F8609E271090AB00A61CC8 /* PhotosDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDataSource.swift; sourceTree = "<group>"; };
+		23F860A02710963900A61CC8 /* UITableViewCell+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+identifier.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +205,7 @@
 				23021ACE2710456200C223BE /* OSLog+Loggers.swift */,
 				23021AD02710457200C223BE /* Encodable+Extension.swift */,
 				23021AD22710458700C223BE /* String+Url.swift */,
+				23F860A02710963900A61CC8 /* UITableViewCell+identifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				23F860942710899E00A61CC8 /* PhotosViewController.swift */,
+				23F86098271089CB00A61CC8 /* PhotoTableViewCell.swift */,
+				23F8609E271090AB00A61CC8 /* PhotosDataSource.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				23F86096271089B400A61CC8 /* PhotosViewModel.swift */,
+				23F8609C27108D1E00A61CC8 /* PhotoCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -278,7 +288,6 @@
 		23F8608C2710893500A61CC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				23F86098271089CB00A61CC8 /* PhotoTableViewCell.swift */,
 				23F86099271089CB00A61CC8 /* PhotoTableViewCell.xib */,
 			);
 			path = View;
@@ -366,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23021AD6271046D500C223BE /* URLRequestBuilding.swift in Sources */,
+				23F8609F271090AB00A61CC8 /* PhotosDataSource.swift in Sources */,
 				23021AE927104A7E00C223BE /* DataRequesting.swift in Sources */,
 				23021ADA2710470300C223BE /* URLRequestBuilder.swift in Sources */,
 				23021AC4271041B000C223BE /* AbsolutePath.swift in Sources */,
@@ -383,8 +393,10 @@
 				23021AA627103A8E00C223BE /* AppDelegate.swift in Sources */,
 				23021ADF2710476700C223BE /* DataResponseHandler.swift in Sources */,
 				23021AC22710419E00C223BE /* BaseURL.swift in Sources */,
+				23F8609D27108D1E00A61CC8 /* PhotoCellViewModel.swift in Sources */,
 				23F86097271089B400A61CC8 /* PhotosViewModel.swift in Sources */,
 				23F860912710895C00A61CC8 /* Photo.swift in Sources */,
+				23F860A12710963900A61CC8 /* UITableViewCell+identifier.swift in Sources */,
 				23021AE42710487F00C223BE /* DataResponseDecoding.swift in Sources */,
 				23021ADD2710475600C223BE /* DataResponseHandling.swift in Sources */,
 				23021AEF27104AE300C223BE /* RequestManager.swift in Sources */,
