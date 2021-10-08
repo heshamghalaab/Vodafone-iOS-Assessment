@@ -10,27 +10,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="168" id="KGk-i7-Jjw" customClass="PhotoTableViewCell" customModule="iOS_Assessment" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="187" id="KGk-i7-Jjw" customClass="PhotoTableViewCell" customModule="iOS_Assessment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-KG-6PR">
-                        <rect key="frame" x="16" y="8" width="288" height="152"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-KG-6PR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="152" id="5gl-1i-9Se"/>
+                            <constraint firstAttribute="height" constant="186" id="Wkd-9e-0ej"/>
                         </constraints>
                     </imageView>
                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-xT-cFi">
-                        <rect key="frame" x="241" y="126" width="55" height="26"/>
+                        <rect key="frame" x="0.0" y="160" width="320" height="26"/>
                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DPL-4z-AKf">
-                            <rect key="frame" x="0.0" y="0.0" width="55" height="26"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="48X-TX-vrQ">
-                                    <rect key="frame" x="8" y="4" width="39" height="18"/>
+                                    <rect key="frame" x="8" y="4" width="304" height="18"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -47,13 +47,13 @@
                     </visualEffectView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="aqJ-KG-6PR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="FoY-oK-pzO"/>
-                    <constraint firstAttribute="trailing" secondItem="wbx-xT-cFi" secondAttribute="trailing" constant="24" id="awR-sL-hcR"/>
-                    <constraint firstAttribute="bottom" secondItem="wbx-xT-cFi" secondAttribute="bottom" constant="16" id="dPu-8q-shI"/>
-                    <constraint firstAttribute="bottom" secondItem="aqJ-KG-6PR" secondAttribute="bottom" constant="8" id="hMt-JM-VlC"/>
-                    <constraint firstItem="wbx-xT-cFi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="pgl-Qe-XS5"/>
-                    <constraint firstItem="aqJ-KG-6PR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uIy-I4-ngs"/>
-                    <constraint firstAttribute="trailing" secondItem="aqJ-KG-6PR" secondAttribute="trailing" constant="16" id="ytn-ok-rH2"/>
+                    <constraint firstItem="aqJ-KG-6PR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FoY-oK-pzO"/>
+                    <constraint firstItem="wbx-xT-cFi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LXb-Kc-ImG"/>
+                    <constraint firstAttribute="bottom" secondItem="wbx-xT-cFi" secondAttribute="bottom" id="YE5-AS-bfp"/>
+                    <constraint firstAttribute="bottom" secondItem="aqJ-KG-6PR" secondAttribute="bottom" id="fgK-64-rlG"/>
+                    <constraint firstAttribute="trailing" secondItem="wbx-xT-cFi" secondAttribute="trailing" id="mjm-hV-Iae"/>
+                    <constraint firstItem="aqJ-KG-6PR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uIy-I4-ngs"/>
+                    <constraint firstAttribute="trailing" secondItem="aqJ-KG-6PR" secondAttribute="trailing" id="ytn-ok-rH2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -62,7 +62,10 @@
                 <outlet property="authorNameLabel" destination="48X-TX-vrQ" id="zvv-rh-nUW"/>
                 <outlet property="photoImageView" destination="aqJ-KG-6PR" id="kXf-Z2-9Xt"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="placeholder" width="900" height="497"/>
+    </resources>
 </document>

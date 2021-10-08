@@ -23,11 +23,6 @@ class PhotoTableViewCell: UITableViewCell {
     
     func configure(with viewModel: PhotoCellViewModelProtocol){
         self.authorNameLabel.text = viewModel.outputs.authorName
-        
-        self.photoImageView.backgroundColor = UIColor(
-            red: .random(in: 0...1),
-            green: .random(in: 0...1),
-            blue: .random(in: 0...1), alpha: 1)
     }
     
 }

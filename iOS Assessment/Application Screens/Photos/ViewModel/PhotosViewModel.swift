@@ -10,6 +10,7 @@ import Foundation
 protocol PhotosViewModelInputs {
     func fetchPhotos()
     func photoCellViewModel(atRow row: Int) -> PhotoCellViewModelProtocol
+    func fetchMorePhotosIfAvailable(at row: Int)
 }
 
 protocol PhotosViewModelOutputs {
@@ -34,7 +35,9 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     
     private let provider: PicsumProviding
     private var photos: [Photo] = []
-    
+    private var page: Int = 9
+    private var isGettingPhotos: Bool = false
+    private var didFetchLastPage: Bool = false
     
     init(provider: PicsumProviding = PicsumProvider()) {
         self.provider = provider
@@ -43,12 +46,22 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     /// Inputs
     
     func fetchPhotos(){
-        provider.photos(forPage: 1, withLimit: 20) { result in
+        isGettingPhotos = true
+        showLoading?(true)
+        provider.photos(forPage: page, withLimit: 10) { [weak self] result in
+            guard let self = self else { return }
+            self.isGettingPhotos = false
+            self.showLoading?(false)
+            
             switch result{
             case .failure(let error):
                 self.failureAlert?(error.errorDescription ?? "Unexpected error.")
             case .success(let photos):
-                self.photos = photos
+                // If photos returned as an empty array so we are at the last page.
+                self.didFetchLastPage = photos.isEmpty
+                if self.page == 1 { self.photos = photos }
+                else { self.photos.append(contentsOf: photos) }
+                
                 self.reloadData?()
             }
         }
@@ -56,6 +69,14 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     
     func photoCellViewModel(atRow row: Int) -> PhotoCellViewModelProtocol{
         PhotoCellViewModel(photo: photos[row])
+    }
+    
+    func fetchMorePhotosIfAvailable(at row: Int){
+        guard !isGettingPhotos else { return }
+        guard (row + 1) == photos.count else { return }
+        guard !didFetchLastPage else { return }
+        page += 1
+        self.fetchPhotos()
     }
     
     /// OutPuts

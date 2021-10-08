@@ -18,6 +18,7 @@ class PhotosViewController: UIViewController {
     
     let viewModel: PhotosViewModelProtocol = PhotosViewModel()
     var photosDataSource: PhotosDataSource!
+    var photosDelegate: PhotosDelegate!
     
     // MARK: - View controller lifecycle methods
 
@@ -36,6 +37,10 @@ class PhotosViewController: UIViewController {
     func tableViewConfigurations(){
         self.photosDataSource = PhotosDataSource(viewModel: self.viewModel)
         self.photosTableView.dataSource = photosDataSource
+        
+        self.photosDelegate = PhotosDelegate(viewModel: self.viewModel)
+        self.photosTableView.delegate = photosDelegate
+
         self.photosTableView.estimatedRowHeight = UITableView.automaticDimension
         self.photosTableView.rowHeight = UITableView.automaticDimension
         
