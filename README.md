@@ -24,8 +24,8 @@ Xcode Version 13.0 (13A233)
 - Develop iOS mobile app that display list of photos queried from a public API, there should be an ad placeholder after every 5 photos, and user can open a photo by clicking on it to be fully presented. 
 
 ## Tasks:
-- [ ] Creating App structure.
-- [ ] Building Network Layer and adding photos Provider.
+- [x] Creating App structure.
+- [x] Building Network Layer and adding photos Provider.
 - [ ] Handling Photos Screen UI and fetching the data to it.
 - [ ] Handling Ad Place Holder Logic.
 - [ ] Handling showing Photo in full screen.
