@@ -27,22 +27,3 @@ struct PicsumProvider: PicsumProviding {
         requestManager.request(from: endPoint, completionHandler: completion)
     }
 }
-
-struct PhotosParameters: Encodable {
-    let page: Int
-    let limit: Int
-}
-
-struct Photo: Codable {
-    let id: String
-    let author: String?
-    let url: String?
-    let downloadUrl: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case author = "author"
-        case url = "url"
-        case downloadUrl = "download_url"
-    }
-}
