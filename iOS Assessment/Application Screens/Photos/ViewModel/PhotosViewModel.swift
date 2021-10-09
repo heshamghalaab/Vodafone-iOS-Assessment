@@ -48,6 +48,7 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     private var isconnectedToInternet: Bool = true
     private var ads: [String] = []
     private let AD_INTERVAL = 6
+    private var localDataLoaded: Bool = false
     
     init(provider: PicsumProviding = PicsumProvider(),
          photosCashingProvider: PhotosCashingProviding = PhotosCashingProvider()){
@@ -107,6 +108,15 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
         guard (row + 1) == numberOfItems else { return }
         guard !didFetchLastPage else { return }
         page += 1
+        
+        // To Make Sure that when internet connection is retrived to
+        // clear the data and begin from page 1 to avoid dublications.
+        if localDataLoaded {
+            localDataLoaded = false
+            self.photos.removeAll()
+            self.page = 1
+        }
+        
         self.fetchPhotos()
     }
     
@@ -143,6 +153,7 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
         photosCashingProvider.loadIfExist { [weak self] photos in
             guard let self = self else { return }
             self.photos = photos
+            self.localDataLoaded = true
             self.prepareAdsData()
             self.reloadData?()
         }
