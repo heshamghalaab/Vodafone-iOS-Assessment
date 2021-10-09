@@ -123,7 +123,7 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     /// Preparing Ads data so that we can add an ad every 5 photos.
     func prepareAdsData(){
         var values = [String]()
-        for _ in stride(from: 0, to: photos.count, by: self.AD_INTERVAL - 1) {
+        for _ in stride(from: self.AD_INTERVAL - 1, to: photos.count + 1, by: self.AD_INTERVAL - 1) {
             values.append("Extend the reach of your brand")
         }
         self.ads = values
