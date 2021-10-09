@@ -9,7 +9,11 @@ import Foundation
 
 class PhotosCashingProvider: PhotosCashingProviding{
     
-    private let PATH: String = "localPhotos"
+    private let path: String
+    
+    init(path: String = "localPhotos"){
+        self.path = path
+    }
     
     private func cacheFileUrl(_ fileName: String) -> URL {
         let cacheURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
@@ -17,7 +21,7 @@ class PhotosCashingProvider: PhotosCashingProviding{
     }
     
     func loadIfExist(completion: @escaping (_ photos: [Photo]) -> Void ){
-        let fileURL = cacheFileUrl(PATH)
+        let fileURL = cacheFileUrl(path)
         do {
             let data = try Data(contentsOf: fileURL)
             let photos = try JSONDecoder().decode([Photo].self, from: data)
@@ -28,7 +32,7 @@ class PhotosCashingProvider: PhotosCashingProviding{
     }
     
     func store(photos: [Photo]){
-        let fileURL = cacheFileUrl(PATH)
+        let fileURL = cacheFileUrl(path)
         do {
             let data = try JSONEncoder().encode(photos)
             try data.write(to: fileURL, options: Data.WritingOptions.atomic)
