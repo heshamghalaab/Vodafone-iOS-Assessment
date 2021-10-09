@@ -31,6 +31,10 @@
 		23021AED27104AB000C223BE /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23021AEC27104AB000C223BE /* DataRequester.swift */; };
 		23021AEF27104AE300C223BE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23021AEE27104AE300C223BE /* RequestManager.swift */; };
 		23021AF227105C8F00C223BE /* PicsumProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23021AF127105C8F00C223BE /* PicsumProviding.swift */; };
+		233ED817271209D800F18E56 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED816271209D800F18E56 /* URLSessionMock.swift */; };
+		233ED81A2712134E00F18E56 /* Photo+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED8192712134E00F18E56 /* Photo+Equatable.swift */; };
+		233ED81C2712137000F18E56 /* MockedRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED81B2712137000F18E56 /* MockedRequestManager.swift */; };
+		233ED81E2712139600F18E56 /* EndPointError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED81D2712139600F18E56 /* EndPointError+Equatable.swift */; };
 		2377D84D2710DEC600FE935E /* PhotosDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377D84C2710DEC600FE935E /* PhotosDelegate.swift */; };
 		2377D88327110F0F00FE935E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2377D88227110F0F00FE935E /* SDWebImage */; };
 		2389612E2711FE1D00DB974B /* PhotosCashingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389612D2711FE1D00DB974B /* PhotosCashingProviding.swift */; };
@@ -52,6 +56,16 @@
 		23F8609F271090AB00A61CC8 /* PhotosDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8609E271090AB00A61CC8 /* PhotosDataSource.swift */; };
 		23F860A12710963900A61CC8 /* UITableViewCell+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F860A02710963900A61CC8 /* UITableViewCell+identifier.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		233ED807271208AA00F18E56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23021A9A27103A8E00C223BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23021AA127103A8E00C223BE;
+			remoteInfo = "iOS Assessment";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		23021AA227103A8E00C223BE /* iOS Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +95,11 @@
 		23021AEC27104AB000C223BE /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 		23021AEE27104AE300C223BE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		23021AF127105C8F00C223BE /* PicsumProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumProviding.swift; sourceTree = "<group>"; };
+		233ED803271208AA00F18E56 /* iOS AssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS AssessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		233ED816271209D800F18E56 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		233ED8192712134E00F18E56 /* Photo+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Equatable.swift"; sourceTree = "<group>"; };
+		233ED81B2712137000F18E56 /* MockedRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedRequestManager.swift; sourceTree = "<group>"; };
+		233ED81D2712139600F18E56 /* EndPointError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EndPointError+Equatable.swift"; sourceTree = "<group>"; };
 		2377D84C2710DEC600FE935E /* PhotosDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDelegate.swift; sourceTree = "<group>"; };
 		2389612D2711FE1D00DB974B /* PhotosCashingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCashingProviding.swift; sourceTree = "<group>"; };
 		2389612F2711FE2300DB974B /* PhotosCashingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCashingProvider.swift; sourceTree = "<group>"; };
@@ -111,6 +130,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		233ED800271208AA00F18E56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,6 +145,7 @@
 			children = (
 				23021AB927103CD900C223BE /* README.md */,
 				23021AA427103A8E00C223BE /* iOS Assessment */,
+				233ED804271208AA00F18E56 /* iOS AssessmentTests */,
 				23021AA327103A8E00C223BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				23021AA227103A8E00C223BE /* iOS Assessment.app */,
+				233ED803271208AA00F18E56 /* iOS AssessmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +310,33 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		233ED804271208AA00F18E56 /* iOS AssessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				233ED8182712133A00F18E56 /* Equatable */,
+				233ED815271209C200F18E56 /* Mocks */,
+			);
+			path = "iOS AssessmentTests";
+			sourceTree = "<group>";
+		};
+		233ED815271209C200F18E56 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				233ED816271209D800F18E56 /* URLSessionMock.swift */,
+				233ED81B2712137000F18E56 /* MockedRequestManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		233ED8182712133A00F18E56 /* Equatable */ = {
+			isa = PBXGroup;
+			children = (
+				233ED8192712134E00F18E56 /* Photo+Equatable.swift */,
+				233ED81D2712139600F18E56 /* EndPointError+Equatable.swift */,
+			);
+			path = Equatable;
+			sourceTree = "<group>";
+		};
 		2389612C2711FDF700DB974B /* PhotosCashingProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +468,24 @@
 			productReference = 23021AA227103A8E00C223BE /* iOS Assessment.app */;
 			productType = "com.apple.product-type.application";
 		};
+		233ED802271208AA00F18E56 /* iOS AssessmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 233ED80B271208AA00F18E56 /* Build configuration list for PBXNativeTarget "iOS AssessmentTests" */;
+			buildPhases = (
+				233ED7FF271208AA00F18E56 /* Sources */,
+				233ED800271208AA00F18E56 /* Frameworks */,
+				233ED801271208AA00F18E56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				233ED808271208AA00F18E56 /* PBXTargetDependency */,
+			);
+			name = "iOS AssessmentTests";
+			productName = "iOS AssessmentTests";
+			productReference = 233ED803271208AA00F18E56 /* iOS AssessmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -425,6 +498,10 @@
 				TargetAttributes = {
 					23021AA127103A8E00C223BE = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					233ED802271208AA00F18E56 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 23021AA127103A8E00C223BE;
 					};
 				};
 			};
@@ -445,6 +522,7 @@
 			projectRoot = "";
 			targets = (
 				23021AA127103A8E00C223BE /* iOS Assessment */,
+				233ED802271208AA00F18E56 /* iOS AssessmentTests */,
 			);
 		};
 /* End PBXProject section */
@@ -459,6 +537,13 @@
 				23021AB227103A9000C223BE /* LaunchScreen.storyboard in Resources */,
 				23021AAF27103A9000C223BE /* Assets.xcassets in Resources */,
 				23021AAD27103A8E00C223BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233ED801271208AA00F18E56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +595,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		233ED7FF271208AA00F18E56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233ED81C2712137000F18E56 /* MockedRequestManager.swift in Sources */,
+				233ED817271209D800F18E56 /* URLSessionMock.swift in Sources */,
+				233ED81A2712134E00F18E56 /* Photo+Equatable.swift in Sources */,
+				233ED81E2712139600F18E56 /* EndPointError+Equatable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		233ED808271208AA00F18E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23021AA127103A8E00C223BE /* iOS Assessment */;
+			targetProxy = 233ED807271208AA00F18E56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		23021AAB27103A8E00C223BE /* Main.storyboard */ = {
@@ -706,6 +810,52 @@
 			};
 			name = Release;
 		};
+		233ED809271208AA00F18E56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V78H7WRYL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vodafone.iOS-AssessmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Assessment.app/iOS Assessment";
+			};
+			name = Debug;
+		};
+		233ED80A271208AA00F18E56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V78H7WRYL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vodafone.iOS-AssessmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Assessment.app/iOS Assessment";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -723,6 +873,15 @@
 			buildConfigurations = (
 				23021AB727103A9000C223BE /* Debug */,
 				23021AB827103A9000C223BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		233ED80B271208AA00F18E56 /* Build configuration list for PBXNativeTarget "iOS AssessmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233ED809271208AA00F18E56 /* Debug */,
+				233ED80A271208AA00F18E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
