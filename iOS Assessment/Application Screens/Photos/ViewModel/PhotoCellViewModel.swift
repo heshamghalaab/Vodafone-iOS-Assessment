@@ -7,26 +7,12 @@
 
 import Foundation
 
-protocol PhotoCellViewModelInputs {
-}
-
-protocol PhotoCellViewModelOutputs {
+protocol PhotoCellViewModelProtocol: AnyObject {
     var authorName: String { get }
     var photoUrl: String { get }
 }
 
-protocol PhotoCellViewModelProtocol: AnyObject {
-    var inputs: PhotoCellViewModelInputs { get }
-    var outputs: PhotoCellViewModelOutputs { get set }
-}
-
-class PhotoCellViewModel: PhotoCellViewModelInputs, PhotoCellViewModelOutputs, PhotoCellViewModelProtocol {
-    
-    var inputs: PhotoCellViewModelInputs { self }
-    var outputs: PhotoCellViewModelOutputs {
-        get { self }
-        set { }
-    }
+class PhotoCellViewModel: PhotoCellViewModelProtocol {
     
     private let photo: Photo
     
@@ -36,5 +22,4 @@ class PhotoCellViewModel: PhotoCellViewModelInputs, PhotoCellViewModelOutputs, P
     
     var authorName: String { photo.author ?? "" }
     var photoUrl: String { photo.downloadUrl ?? "" }
-    
 }

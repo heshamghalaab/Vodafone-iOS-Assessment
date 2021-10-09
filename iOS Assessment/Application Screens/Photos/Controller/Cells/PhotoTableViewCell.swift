@@ -23,9 +23,9 @@ class PhotoTableViewCell: UITableViewCell {
     // MARK: - Configuration methods
     
     func configure(with viewModel: PhotoCellViewModelProtocol){
-        self.authorNameLabel.text = viewModel.outputs.authorName
+        self.authorNameLabel.text = viewModel.authorName
         self.photoImageView.sd_setImage(
-            with: URL(string: viewModel.outputs.photoUrl),
+            with: URL(string: viewModel.photoUrl),
             placeholderImage: UIImage(named: "place_holder"))
     }
 }

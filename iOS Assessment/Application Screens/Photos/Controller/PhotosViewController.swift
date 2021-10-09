@@ -74,8 +74,11 @@ class PhotosViewController: UIViewController {
             }
         }
         
-        viewModel.outputs.showPhotoInFullScreen = { [weak self] photo in
+        viewModel.outputs.showPhotoInFullScreen = { [weak self] detailsViewModel in
             guard let self = self else { return }
+            let newController = PhotoDetailsViewController.instantiate(from: .main)
+            newController.viewModel = detailsViewModel
+            self.present(newController, animated: true, completion: nil)
         }
     }
 }

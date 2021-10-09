@@ -23,7 +23,7 @@ protocol PhotosViewModelOutputs {
     var reloadData: ( () -> Void )? { get set }
     var numberOfItems: Int { get }
     var failureAlert: ( (_ message: String) -> Void )? { get set }
-    var showPhotoInFullScreen: ( (Photo) -> Void )? { get set }
+    var showPhotoInFullScreen: ( (PhotoDetailsViewModelProtocol) -> Void )? { get set }
 }
 
 protocol PhotosViewModelProtocol: AnyObject {
@@ -147,7 +147,8 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     
     func didSelectRow(at indexPath: IndexPath){
         guard let row = photoRow(for: indexPath) else { return }
-        showPhotoInFullScreen?(photos[row])
+        let viewModel = PhotoDetailsViewModel(photo: photos[row])
+        showPhotoInFullScreen?(viewModel)
     }
     
     /// OutPuts
@@ -156,5 +157,5 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     var reloadData: ( () -> Void )?
     var numberOfItems: Int { photos.count + ads.count }
     var failureAlert: ((String) -> Void)?
-    var showPhotoInFullScreen: ( (Photo) -> Void )?
+    var showPhotoInFullScreen: ( (PhotoDetailsViewModelProtocol) -> Void )?
 }
