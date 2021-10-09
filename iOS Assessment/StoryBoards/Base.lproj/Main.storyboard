@@ -17,24 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="apl-su-Ega">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9g2-o2-XH8">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="L5t-qh-Jg7">
-                                <rect key="frame" x="188.5" y="64" width="37" height="37"/>
-                                <color key="color" systemColor="systemBlueColor"/>
-                            </activityIndicatorView>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="apl-su-Ega">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="798"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="L5t-qh-Jg7">
+                                        <rect key="frame" x="0.0" y="798" width="414" height="20"/>
+                                        <color key="color" systemColor="systemBlueColor"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="apl-su-Ega" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3aB-zw-EX4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="apl-su-Ega" secondAttribute="trailing" id="KUt-6p-gA6"/>
-                            <constraint firstItem="apl-su-Ega" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q16-Dq-lXK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="apl-su-Ega" secondAttribute="bottom" id="V0Q-4J-DB6"/>
-                            <constraint firstItem="L5t-qh-Jg7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cXx-So-P9y"/>
-                            <constraint firstItem="L5t-qh-Jg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y67-hH-FeH"/>
+                            <constraint firstItem="9g2-o2-XH8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3mw-SK-eZ2"/>
+                            <constraint firstItem="9g2-o2-XH8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="acn-tg-AgR"/>
+                            <constraint firstItem="9g2-o2-XH8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k7M-qr-c6m"/>
+                            <constraint firstItem="9g2-o2-XH8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pVY-OV-Nmd"/>
                         </constraints>
                     </view>
                     <connections>

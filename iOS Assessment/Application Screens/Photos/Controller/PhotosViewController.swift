@@ -46,6 +46,9 @@ class PhotosViewController: UIViewController {
         
         let nib = UINib(nibName: PhotoTableViewCell.identifier, bundle: nil)
         self.photosTableView.register(nib, forCellReuseIdentifier: PhotoTableViewCell.identifier)
+        
+        let adNib = UINib(nibName: AdTableViewCell.identifier, bundle: nil)
+        self.photosTableView.register(adNib, forCellReuseIdentifier: AdTableViewCell.identifier)
     }
     
     /// Binind all changes that could happen in the view model.
