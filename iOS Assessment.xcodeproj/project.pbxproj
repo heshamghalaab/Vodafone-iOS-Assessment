@@ -35,6 +35,8 @@
 		233ED81A2712134E00F18E56 /* Photo+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED8192712134E00F18E56 /* Photo+Equatable.swift */; };
 		233ED81C2712137000F18E56 /* MockedRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED81B2712137000F18E56 /* MockedRequestManager.swift */; };
 		233ED81E2712139600F18E56 /* EndPointError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED81D2712139600F18E56 /* EndPointError+Equatable.swift */; };
+		233ED8212712160B00F18E56 /* DataRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED8202712160B00F18E56 /* DataRequesterTests.swift */; };
+		233ED823271216D700F18E56 /* DataResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233ED822271216D700F18E56 /* DataResponseDecoderTests.swift */; };
 		2377D84D2710DEC600FE935E /* PhotosDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377D84C2710DEC600FE935E /* PhotosDelegate.swift */; };
 		2377D88327110F0F00FE935E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2377D88227110F0F00FE935E /* SDWebImage */; };
 		2389612E2711FE1D00DB974B /* PhotosCashingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389612D2711FE1D00DB974B /* PhotosCashingProviding.swift */; };
@@ -100,6 +102,8 @@
 		233ED8192712134E00F18E56 /* Photo+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Equatable.swift"; sourceTree = "<group>"; };
 		233ED81B2712137000F18E56 /* MockedRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedRequestManager.swift; sourceTree = "<group>"; };
 		233ED81D2712139600F18E56 /* EndPointError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EndPointError+Equatable.swift"; sourceTree = "<group>"; };
+		233ED8202712160B00F18E56 /* DataRequesterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequesterTests.swift; sourceTree = "<group>"; };
+		233ED822271216D700F18E56 /* DataResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponseDecoderTests.swift; sourceTree = "<group>"; };
 		2377D84C2710DEC600FE935E /* PhotosDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDelegate.swift; sourceTree = "<group>"; };
 		2389612D2711FE1D00DB974B /* PhotosCashingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCashingProviding.swift; sourceTree = "<group>"; };
 		2389612F2711FE2300DB974B /* PhotosCashingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCashingProvider.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 			children = (
 				233ED8182712133A00F18E56 /* Equatable */,
 				233ED815271209C200F18E56 /* Mocks */,
+				233ED81F2712160B00F18E56 /* Requests */,
 			);
 			path = "iOS AssessmentTests";
 			sourceTree = "<group>";
@@ -335,6 +340,15 @@
 				233ED81D2712139600F18E56 /* EndPointError+Equatable.swift */,
 			);
 			path = Equatable;
+			sourceTree = "<group>";
+		};
+		233ED81F2712160B00F18E56 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				233ED8202712160B00F18E56 /* DataRequesterTests.swift */,
+				233ED822271216D700F18E56 /* DataResponseDecoderTests.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		2389612C2711FDF700DB974B /* PhotosCashingProvider */ = {
@@ -599,8 +613,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233ED8212712160B00F18E56 /* DataRequesterTests.swift in Sources */,
 				233ED81C2712137000F18E56 /* MockedRequestManager.swift in Sources */,
 				233ED817271209D800F18E56 /* URLSessionMock.swift in Sources */,
+				233ED823271216D700F18E56 /* DataResponseDecoderTests.swift in Sources */,
 				233ED81A2712134E00F18E56 /* Photo+Equatable.swift in Sources */,
 				233ED81E2712139600F18E56 /* EndPointError+Equatable.swift in Sources */,
 			);
