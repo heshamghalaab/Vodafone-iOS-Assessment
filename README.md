@@ -27,4 +27,4 @@ Xcode Version 13.0 (13A233)
 - [x] Handling Ad Place Holder Logic.
 - [x] Handling showing Photo in full screen.
 - [x] Handling Cashing and Offline Mode.
-- [ ] Writing unit tests.
+- [x] Writing unit tests.
