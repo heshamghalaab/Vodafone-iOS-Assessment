@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoTableViewCell: UITableViewCell {
 
@@ -23,6 +24,8 @@ class PhotoTableViewCell: UITableViewCell {
     
     func configure(with viewModel: PhotoCellViewModelProtocol){
         self.authorNameLabel.text = viewModel.outputs.authorName
+        self.photoImageView.sd_setImage(
+            with: URL(string: viewModel.outputs.photoUrl),
+            placeholderImage: UIImage(named: "placeholder"))
     }
-    
 }

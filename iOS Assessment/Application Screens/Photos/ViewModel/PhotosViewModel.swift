@@ -35,7 +35,7 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     
     private let provider: PicsumProviding
     private var photos: [Photo] = []
-    private var page: Int = 9
+    private var page: Int = 1
     private var isGettingPhotos: Bool = false
     private var didFetchLastPage: Bool = false
     
