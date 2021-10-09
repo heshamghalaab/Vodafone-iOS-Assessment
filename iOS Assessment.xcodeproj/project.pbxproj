@@ -33,6 +33,8 @@
 		23021AF227105C8F00C223BE /* PicsumProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23021AF127105C8F00C223BE /* PicsumProviding.swift */; };
 		2377D84D2710DEC600FE935E /* PhotosDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2377D84C2710DEC600FE935E /* PhotosDelegate.swift */; };
 		2377D88327110F0F00FE935E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2377D88227110F0F00FE935E /* SDWebImage */; };
+		2389612E2711FE1D00DB974B /* PhotosCashingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389612D2711FE1D00DB974B /* PhotosCashingProviding.swift */; };
+		238961302711FE2300DB974B /* PhotosCashingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389612F2711FE2300DB974B /* PhotosCashingProvider.swift */; };
 		23BB6A2627119A68003D46B8 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB6A2427119A68003D46B8 /* AdTableViewCell.swift */; };
 		23BB6A2727119A68003D46B8 /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23BB6A2527119A68003D46B8 /* AdTableViewCell.xib */; };
 		23BB6A2A2711A901003D46B8 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB6A292711A901003D46B8 /* Monitor.swift */; };
@@ -80,6 +82,8 @@
 		23021AEE27104AE300C223BE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		23021AF127105C8F00C223BE /* PicsumProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumProviding.swift; sourceTree = "<group>"; };
 		2377D84C2710DEC600FE935E /* PhotosDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDelegate.swift; sourceTree = "<group>"; };
+		2389612D2711FE1D00DB974B /* PhotosCashingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCashingProviding.swift; sourceTree = "<group>"; };
+		2389612F2711FE2300DB974B /* PhotosCashingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCashingProvider.swift; sourceTree = "<group>"; };
 		23BB6A2427119A68003D46B8 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		23BB6A2527119A68003D46B8 /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
 		23BB6A292711A901003D46B8 /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 		23021ACC2710453700C223BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2389612C2711FDF700DB974B /* PhotosCashingProvider */,
 				23BB6A322711B488003D46B8 /* Storyboard */,
 				23BB6A282711A8F8003D46B8 /* Monitor */,
 				23021ACD2710454A00C223BE /* Extensions */,
@@ -275,6 +280,15 @@
 				23021AF127105C8F00C223BE /* PicsumProviding.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		2389612C2711FDF700DB974B /* PhotosCashingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2389612D2711FE1D00DB974B /* PhotosCashingProviding.swift */,
+				2389612F2711FE2300DB974B /* PhotosCashingProvider.swift */,
+			);
+			path = PhotosCashingProvider;
 			sourceTree = "<group>";
 		};
 		23BB6A2327119917003D46B8 /* Cells */ = {
@@ -468,6 +482,8 @@
 				23021AED27104AB000C223BE /* DataRequester.swift in Sources */,
 				23021AC6271041C800C223BE /* HTTPMethod.swift in Sources */,
 				23F860952710899E00A61CC8 /* PhotosViewController.swift in Sources */,
+				238961302711FE2300DB974B /* PhotosCashingProvider.swift in Sources */,
+				2389612E2711FE1D00DB974B /* PhotosCashingProviding.swift in Sources */,
 				23F8609A271089CB00A61CC8 /* PhotoTableViewCell.swift in Sources */,
 				23021AE6271048AA00C223BE /* DataResponseDecoder.swift in Sources */,
 				23021AEB27104A9A00C223BE /* URLSessionRequesting.swift in Sources */,

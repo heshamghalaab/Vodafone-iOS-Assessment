@@ -40,6 +40,7 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     }
     
     private let provider: PicsumProviding
+    private let photosCashingProvider: PhotosCashingProviding
     private var photos: [Photo] = []
     private var page: Int = 1
     private var isGettingPhotos: Bool = false
@@ -48,12 +49,14 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     private var ads: [String] = []
     private let AD_INTERVAL = 6
     
-    init(provider: PicsumProviding = PicsumProvider()) {
+    init(provider: PicsumProviding = PicsumProvider(),
+         photosCashingProvider: PhotosCashingProviding = PhotosCashingProvider()){
+        
         self.provider = provider
+        self.photosCashingProvider = photosCashingProvider
         
         Monitor().startMonitoring { [weak self] isReachable in
             guard let self = self else { return }
-            print("Is Connected To internet: \(isReachable)")
             self.isconnectedToInternet = isReachable
         }
     }
@@ -61,18 +64,15 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     /// Inputs
     
     func fetchPhotos(){
-        guard isconnectedToInternet else {
-            loadLocalPhotosDataIfExist()
-            return
-        }
-        
         isGettingPhotos = true
         showLoading?(true)
         provider.photos(forPage: page, withLimit: 10) { [weak self] result in
             guard let self = self else { return }
             switch result{
             case .failure(let error):
+                self.loadLocalPhotosDataIfNeeded()
                 self.failureAlert?(error.errorDescription ?? "Unexpected error.")
+                
             case .success(let photos):
                 self.handle(photos: photos)
                 self.prepareAdsData()
@@ -135,14 +135,22 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
     
     func adTitle(atRow row: Int) -> String{ ads[row] }
     
-    // TODO: Load photos when there is no internet connection.
-    func loadLocalPhotosDataIfExist(){
+    /// Load photos when there is no internet connection.
+    func loadLocalPhotosDataIfNeeded(){
+        // Will Load From Local Only if photos array is empty.
+        guard photos.isEmpty else { return }
         
+        photosCashingProvider.loadIfExist { [weak self] photos in
+            guard let self = self else { return }
+            self.photos = photos
+            self.prepareAdsData()
+            self.reloadData?()
+        }
     }
     
-    // TODO: Saving 20 items of photos locally.
+    /// Saving photos locally for offline Mode.
     func storePhotosDataLocally(){
-        
+        photosCashingProvider.store(photos: photos)
     }
     
     func didSelectRow(at indexPath: IndexPath){
