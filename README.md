@@ -26,8 +26,8 @@ Xcode Version 13.0 (13A233)
 ## Tasks:
 - [x] Creating App structure.
 - [x] Building Network Layer and adding photos Provider.
-- [ ] Handling Photos Screen UI and fetching the data to it.
-- [ ] Handling Ad Place Holder Logic.
+- [x] Handling Photos Screen UI and fetching the data to it.
+- [x] Handling Ad Place Holder Logic.
 - [ ] Handling showing Photo in full screen.
 - [ ] Handling Cashing and Offline Mode.
 - [ ] Writing unit tests.
