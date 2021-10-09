@@ -26,5 +26,5 @@ Xcode Version 13.0 (13A233)
 - [x] Handling Photos Screen UI and fetching the data to it.
 - [x] Handling Ad Place Holder Logic.
 - [x] Handling showing Photo in full screen.
-- [ ] Handling Cashing and Offline Mode.
+- [x] Handling Cashing and Offline Mode.
 - [ ] Writing unit tests.
