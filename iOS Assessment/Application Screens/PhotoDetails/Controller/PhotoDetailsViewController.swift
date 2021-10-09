@@ -45,6 +45,11 @@ class PhotoDetailsViewController: UIViewController {
     func setupData(){
         self.authorNameLabel.text = viewModel.authorName
         self.photoImageView.sd_setImage(
-            with: URL(string: viewModel.photoUrl), placeholderImage: UIImage(named: "place_holder"))
+            with: URL(string: viewModel.photoUrl),
+            placeholderImage: UIImage(named: "place_holder")) { image, _, _, _ in
+                DispatchQueue.main.async {
+                    self.view.backgroundColor = image?.mostDominantColor
+                }
+            }
     }
 }
