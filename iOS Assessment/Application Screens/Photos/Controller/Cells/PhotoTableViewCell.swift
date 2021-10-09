@@ -26,6 +26,6 @@ class PhotoTableViewCell: UITableViewCell {
         self.authorNameLabel.text = viewModel.outputs.authorName
         self.photoImageView.sd_setImage(
             with: URL(string: viewModel.outputs.photoUrl),
-            placeholderImage: UIImage(named: "placeholder"))
+            placeholderImage: UIImage(named: "place_holder"))
     }
 }

@@ -73,6 +73,9 @@ class PhotosViewController: UIViewController {
                 self.activityIndicatorView.stopAnimating()
             }
         }
+        
+        viewModel.outputs.showPhotoInFullScreen = { [weak self] photo in
+            guard let self = self else { return }
+        }
     }
-    
 }

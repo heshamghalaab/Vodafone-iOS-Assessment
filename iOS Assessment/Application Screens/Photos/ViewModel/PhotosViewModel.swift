@@ -15,6 +15,7 @@ protocol PhotosViewModelInputs {
     
     func adRow(for indexPath: IndexPath) -> Int?
     func photoRow(for indexPath: IndexPath) -> Int?
+    func didSelectRow(at indexPath: IndexPath)
 }
 
 protocol PhotosViewModelOutputs {
@@ -22,6 +23,7 @@ protocol PhotosViewModelOutputs {
     var reloadData: ( () -> Void )? { get set }
     var numberOfItems: Int { get }
     var failureAlert: ( (_ message: String) -> Void )? { get set }
+    var showPhotoInFullScreen: ( (Photo) -> Void )? { get set }
 }
 
 protocol PhotosViewModelProtocol: AnyObject {
@@ -143,10 +145,16 @@ class PhotosViewModel: PhotosViewModelInputs, PhotosViewModelOutputs, PhotosView
         
     }
     
+    func didSelectRow(at indexPath: IndexPath){
+        guard let row = photoRow(for: indexPath) else { return }
+        showPhotoInFullScreen?(photos[row])
+    }
+    
     /// OutPuts
     
     var showLoading: ( (_ show: Bool) -> Void )?
     var reloadData: ( () -> Void )?
     var numberOfItems: Int { photos.count + ads.count }
     var failureAlert: ((String) -> Void)?
+    var showPhotoInFullScreen: ( (Photo) -> Void )?
 }

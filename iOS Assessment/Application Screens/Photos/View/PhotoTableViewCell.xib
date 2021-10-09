@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-KG-6PR">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="place_holder" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-KG-6PR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="186" id="Wkd-9e-0ej"/>
@@ -66,6 +66,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="placeholder" width="900" height="497"/>
+        <image name="place_holder" width="900" height="497"/>
     </resources>
 </document>
